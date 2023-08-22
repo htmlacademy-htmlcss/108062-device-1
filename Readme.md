@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Резанов](https://up.htmlacademy.ru/htmlcss-individual/1/user/108062).
-* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena)
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
