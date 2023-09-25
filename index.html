@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
     <header class="header-index">
       <h1 class="visually-hidden">Интернет-магазин «Девайс».</h1>
-      <a class="logo">
-        <span class="visually-hidden">Логотип интернет-магазина «Девайс».</span>
-      </a>
+      <img class="logo-header" src="images/icons/logo-header.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
       <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="search">Поиск по сайту.</label>
-        <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+        <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <button type="submit" class="search-btn">Найти</button>
       </form>
       <nav class="navigation-user">
@@ -28,7 +27,11 @@
             <a class="navigation-user-link" href="#">Корзина</a>
           </li>
         </ul>
-        <a href="catalog.html">Каталог товаров</a>
+        <a class="catalog-link" href="catalog.html">Каталог товаров</a>
+        <batton type="button" class="catalog-btn">
+          <div class="catalog-btn-img">
+          </div>
+        </batton>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -49,7 +52,7 @@
         <ul class="promo-slider-list">
           <li class="promo-slider-item item-active">
             <img class="promo-slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
-            <span>01</span>
+            <span class="promo-slider-number">01</span>
             <p class="promo-slider-bold">
               Порхает как бабочка, жалит как пчела!
             </p>
@@ -58,20 +61,20 @@
               замаскированным под стандартную камеру.
             </p>
             <a class="promo-slider-link" href="#">Подробнее</a>
-            <table>
-              <tr>
-                <th>Дальность полета</th>
-                <th>Радиус поражения</th>
+            <table class="promo-slider-table">
+              <tr class="promo-slider-tr">
+                <th class="promo-slider-th">Дальность полета</th>
+                <th class="promo-slider-th">Радиус поражения</th>
               </tr>
-              <tr>
-                <td>800 м</td>
-                <td>50 м</td>
+              <tr class="promo-slider-tr">
+                <td class="promo-slider-td">800 м</td>
+                <td class="promo-slider-td">50 м</td>
               </tr>
             </table>
           </li>
           <li class="promo-slider-item">
             <img class="promo-slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
-            <span>02</span>
+            <span class="promo-slider-number">02</span>
             <p class="promo-slider-bold">
               Худеем правильно!
             </p>
@@ -80,18 +83,18 @@
               занятия и соблюдать диету.
             </p>
             <a class="promo-slider-link" href="#">Подробнее</a>
-            <table>
-              <tr>
-                <th>Без подзарядки</th>
+            <table class="promo-slider-table">
+              <tr class="promo-slider-tr">
+                <th class="promo-slider-th">Без подзарядки</th>
               </tr>
-              <tr>
-                <td>48 часов</td>
+              <tr class="promo-slider-tr">
+                <td class="promo-slider-td">48 часов</td>
               </tr>
             </table>
           </li>
           <li class="promo-slider-item">
             <img class="promo-slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи.">
-            <span>03</span>
+            <span class="promo-slider-number">03</span>
             <p class="promo-slider-bold">
               Делай селфи, как Бен Стиллер!
             </p>
@@ -100,16 +103,16 @@
               (Восемь, Карл!) метров длиной и весом всего 5 кг.
             </p>
             <a class="promo-slider-link" href="#">Подробнее</a>
-            <table>
-              <tr>
-                <th>Длина палки</th>
-                <th>Вес палки</th>
-                <th>Материал</th>
+            <table class="promo-slider-table">
+              <tr class="promo-slider-tr">
+                <th class="promo-slider-th">Длина палки</th>
+                <th class="promo-slider-th">Вес палки</th>
+                <th class="promo-slider-th">Материал</th>
               </tr>
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
+              <tr class="promo-slider-tr">
+                <td class="promo-slider-td">8,5 м</td>
+                <td class="promo-slider-td">5 кг</td>
+                <td class="promo-slider-td">Карбон</td>
               </tr>
             </table>
           </li>
@@ -124,7 +127,7 @@
         </div>
         <ul class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination-btn slider-pagination-btn-current" type="button">
+            <button class="slider-pagination-btn slider-pagination-btn-active" type="button">
               <span class="visually-hidden">Квадрокоптер.</span>
             </button>
           </li>
@@ -144,22 +147,46 @@
         <h2 class="visually-hidden">Девайсы.</h2>
         <ul class="devices-list">
           <li class="devices-item">
-            <a class="devices-link" href="#">Виртуальная реальность</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-vr">
+              </div>
+                Виртуальная реальность
+            </a>
           </li>
           <li class="devices-item">
-            <a class="devices-link" href="#">Моноподы для селфи</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-selfie">
+              </div>
+              Моноподы для селфи
+            </a>
           </li>
           <li class="devices-item">
-            <a class="devices-link" href="#">Экшн-камеры</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-camera">
+              </div>
+              Экшн-камеры
+            </a>
           </li>
           <li class="devices-item">
-            <a class="devices-link" href="#">Фитнес-браслеты</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-bracelet">
+              </div>
+              Фитнес-браслеты
+            </a>
           </li>
           <li class="devices-item">
-            <a class="devices-link" href="#">Умные часы</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-watch">
+              </div>
+              Умные часы
+            </a>
           </li>
           <li class="devices-item">
-            <a class="devices-link" href="#">Квадрокоптеры</a>
+            <a class="devices-link" href="#">
+              <div class="devices-images devices-image-quadcopter">
+              </div>
+              Квадрокоптеры
+            </a>
           </li>
         </ul>
       </section>
@@ -167,32 +194,44 @@
         <h2 class="visually-hidden">Услуги.</h2>
         <ul class="slider-services-list">
           <li class="slider-services-item services-item-active">
-            <h3>Доставка</h3>
-            <p class="slider-services-description">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-              совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
-              ваш этаж.
-            </p>
+            <div class="slider-services-wrapper">
+              <h3>Доставка</h3>
+              <p class="slider-services-description">
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
+                ваш этаж.
+              </p>
+              <div class="slider-services-img slider-services-img-delivery">
+              </div>
+            </div>
           </li>
           <li class="slider-services-item">
-            <h3>Гарантия</h3>
-            <p class="slider-services-description">
-              Если из-за возгорания купленного у нас товара у вас сгорит дом —
-              не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-            </p>
+            <div class="slider-services-wrapper">
+              <h3>Гарантия</h3>
+              <p class="slider-services-description">
+                Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+              </p>
+              <div class="slider-services-img slider-services-img-guarantee">
+              </div>
+            </div>
           </li>
           <li class="slider-services-item">
-            <h3>Кредит</h3>
-            <p class="slider-services-description">
-              Залезть в долговую яму стало проще! Кредитные консультанты
-              подберут для вас наиболее выгодные условия кредита. Выгодные для
-              банка, разумеется.
-            </p>
+            <div class="slider-services-wrapper">
+              <h3>Кредит</h3>
+              <p class="slider-services-description">
+                Залезть в долговую яму стало проще! Кредитные консультанты
+                подберут для вас наиболее выгодные условия кредита. Выгодные для
+                банка, разумеется.
+              </p>
+              <div class="slider-services-img slider-services-img-credit">
+              </div>
+            </div>
           </li>
         </ul>
         <ul class="slider-services-list-btn">
           <li class="slider-services-item-btn services-item-btn-active">
-            <button type="button" class="slider-services-btn">Доставка</button>
+            <button type="button" class="slider-services-btn slider-services-btn-active">Доставка</button>
           </li>
           <li class="slider-services-item-btn">
             <button type="button" class="slider-services-btn">Гарантия</button>
@@ -201,7 +240,13 @@
             <button type="button" class="slider-services-btn">Кредит</button>
           </li>
         </ul>
-        <a href="#">Доставим редкий товар под заказ</a>
+        <div class="delivery-special-wrapper">
+          <div class="delivery-special-car">
+          </div>
+          <a class="delivery-special-link" href="#">Доставим редкий товар под заказ</a>
+          <div class="delivery-special-em">
+          </div>
+        </div>
       </section>
       <section class="about">
         <h2>О нас</h2>
@@ -248,9 +293,11 @@
         </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="subscribe-e-mail">Ваш e-mail.</label>
-          <input type="email" name="subscribe-e-mail" id="subscribe-e-mail" placeholder="Ваш e-mail">
-          <button type="submit" name="subscribe-btn">Подписаться</button>
+          <input class="subscribe-input" type="email" name="subscribe-e-mail" id="subscribe-e-mail" placeholder="Ваш e-mail">
+          <button class="subscribe-button" type="submit" name="subscribe-btn">Подписаться</button>
         </form>
+        <div class="subscribe-img">
+        </div>
         <p class="subscribe-description">
           Это бесплатно
         </p>
@@ -258,10 +305,8 @@
     </main>
 
     <footer class="footer-index">
-      <a class="logo-footer">
-        <span class="visually-hidden">Логотип интернет-магазина «Девайс».</span>
-      </a>
-      <address>
+      <img class="logo-footer" src="images/icons/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+      <address class="address">
         Санкт-Петербург, набережная реки Карповки, 5, литера П.
       </address>
       <ul class="navigation-list">
@@ -275,17 +320,25 @@
           <a class="navigation-link" href="#">Контакты</a>
         </li>
       </ul>
-      <a class="logo-tg" href="https://t.me/htmlacademy">
+      <a class="logo-tg-link" href="https://t.me/htmlacademy">
+        <div class="logo-img logo-tg-img">
+        </div>
         <span class="visually-hidden">Ссылка на telegram.</span>
       </a>
-      <a class="logo-ytb" href="https://www.youtube.com/user/htmlacademyru">
+      <a class="logo-ytb-link" href="https://www.youtube.com/user/htmlacademyru">
+        <div class="logo-img logo-ytb-img">
+        </div>
         <span class="visually-hidden">Ссылка на youtube.</span>
       </a>
-      <a class="logo-tw" href="https://twitter.com/htmlacademy_ru">
+      <a class="logo-tw-link" href="https://twitter.com/htmlacademy_ru">
+        <div class="logo-img logo-tw-img">
+        </div>
         <span class="visually-hidden">Ссылка на twitter.</span>
       </a>
-      <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a class="logo-html-ac" href="https://htmlacademy.ru/">
+      <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="logo-html-ac-link" href="https://htmlacademy.ru/">
+        <div class="logo-html-ac-img">
+        </div>
         <span class="visually-hidden">Ссылка на онлайн-студию веб-разработки html academy.</span>
       </a>
     </footer>
