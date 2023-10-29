@@ -20,13 +20,13 @@
           </form>
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
-              <a class="navigation-user-link-login" href="#">Войти</a>
+              <a class="navigation-user-link navigation-user-link-login" href="#">Войти</a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link-compare" href="#">Сравнить</a>
+              <a class="navigation-user-link navigation-user-link-compare" href="#">Сравнить</a>
             </li>
             <li class="navigation-user-item">
-              <a class="navigation-user-link-basket" href="#">Корзина</a>
+              <a class="navigation-user-link navigation-user-link-basket" href="#">Корзина</a>
             </li>
           </ul>
         </div>
@@ -52,8 +52,8 @@
         <h2 class="visually-hidden">Слайдер с товарами.</h2>
         <ul class="promo-slider-list">
           <li class="promo-slider-item item-active">
-            <img class="promo-slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
             <span class="promo-slider-number">01</span>
+            <img class="promo-slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Порхает как бабочка, жалит как пчела!
@@ -76,8 +76,8 @@
             </div>
           </li>
           <li class="promo-slider-item">
-            <img class="promo-slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
             <span class="promo-slider-number">02</span>
+            <img class="promo-slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Худеем правильно!
@@ -98,8 +98,8 @@
             </div>
           </li>
           <li class="promo-slider-item">
-            <img class="promo-slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи.">
             <span class="promo-slider-number">03</span>
+            <img class="promo-slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Делай селфи, как Бен Стиллер!
@@ -266,10 +266,14 @@
           </p>
           <h3>Время работы</h3>
           <dl class="contacts-list">
-            <dt>пн—пт:</dt>
-            <dd>с 10:00 до 22:00</dd>
-            <dt>сб—вс:</dt>
-            <dd>с 10:00 до 19:00</dd>
+            <div class="contacts-list-container">
+              <dt>пн—пт:</dt>
+              <dd>с 10:00 до 22:00</dd>
+            </div>
+            <div class="contacts-list-container">
+              <dt>сб—вс:</dt>
+              <dd>с 10:00 до 19:00</dd>
+            </div>
           </dl>
           <a class="contacts-mail-link" href="mailto:somemail@mail.com">Напишите нам</a>
         </section>
@@ -296,14 +300,12 @@
     </main>
 
     <footer class="footer-index">
-      <div class="container-index container-wrapper">
-        <div class="container-address-wrapper">
-          <img class="logo-footer" src="images/icons/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+      <div class="container-wrapper">
+        <img class="logo-footer" src="images/icons/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+        <div class="container-footer-index">
           <address class="address">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
           </address>
-        </div>
-        <div class="conteiner-footer-lists">
           <ul class="footer-navigation-list">
             <li class="footer-navigation-item">
               <a class="navigation-link" href="#">Доставка</a>
@@ -315,6 +317,9 @@
               <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+        </div>
+        <div class="container-footer-index-btm">
           <ul class="resources-list">
             <li>
               <a class="logo-resources-link logo-tg-img" href="https://t.me/htmlacademy">
@@ -332,13 +337,10 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div>
-          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           <a class="logo-html-ac-link" href="https://htmlacademy.ru/">
             <span class="visually-hidden">Ссылка на онлайн-студию веб-разработки html academy.</span>
           </a>
-      </div>
+        </div>
       </div>
     </footer>
 
