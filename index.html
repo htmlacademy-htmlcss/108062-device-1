@@ -9,7 +9,9 @@
 
     <header class="header-index container-wrapper">
       <h1 class="visually-hidden">Интернет-магазин «Девайс».</h1>
-      <img class="logo-header" src="images/icons/logo-header.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+      <a class="logo-header-link" href="#">
+        <img class="logo-header" src="images/icons/logo-header.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+      </a>
       <nav class="navigation">
         <div class="container-navigation-user">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -62,16 +64,12 @@
                 замаскированным под стандартную камеру.
               </p>
               <a class="promo-slider-link" href="#">Подробнее</a>
-              <table class="promo-slider-table">
-                <tr class="promo-slider-tr">
-                  <th class="promo-slider-th">Дальность полета</th>
-                  <th class="promo-slider-th">Радиус поражения</th>
-                </tr>
-                <tr class="promo-slider-tr">
-                  <td class="promo-slider-td">800 м</td>
-                  <td class="promo-slider-td">50 м</td>
-                </tr>
-              </table>
+              <dl class="promo-slider-dl">
+                <dt class="promo-slider-dt">Дальность полета</dt>
+                <dd class="promo-slider-dd">800 м</dd>
+                <dt class="promo-slider-dt">Радиус поражения</dt>
+                <dd class="promo-slider-dd">50 м</dd>
+              </dl>
             </div>
           </li>
           <li class="promo-slider-item">
@@ -79,21 +77,17 @@
             <img class="promo-slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
-                Худеем правильно!
+                Худеем<br> правильно!
               </p>
               <p class="promo-slider-description">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
                 занятия и соблюдать диету.
               </p>
               <a class="promo-slider-link" href="#">Подробнее</a>
-              <table class="promo-slider-table">
-                <tr class="promo-slider-tr">
-                  <th class="promo-slider-th">Без подзарядки</th>
-                </tr>
-                <tr class="promo-slider-tr">
-                  <td class="promo-slider-td">48 часов</td>
-                </tr>
-              </table>
+              <dl class="promo-slider-dl">
+                <dt class="promo-slider-dt">Без подзарядки</dt>
+                <dd class="promo-slider-dd">48 часов</dd>
+              </dl>
             </div>
           </li>
           <li class="promo-slider-item">
@@ -101,25 +95,21 @@
             <img class="promo-slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
-                Делай селфи, как Бен Стиллер!
+                Делай селфи,<br> как Бен Стиллер!
               </p>
               <p class="promo-slider-description">
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь
                 (Восемь, Карл!) метров длиной и весом всего 5 кг.
               </p>
               <a class="promo-slider-link" href="#">Подробнее</a>
-              <table class="promo-slider-table">
-                <tr class="promo-slider-tr">
-                  <th class="promo-slider-th">Длина палки</th>
-                  <th class="promo-slider-th">Вес палки</th>
-                  <th class="promo-slider-th">Материал</th>
-                </tr>
-                <tr class="promo-slider-tr">
-                  <td class="promo-slider-td">8,5 м</td>
-                  <td class="promo-slider-td">5 кг</td>
-                  <td class="promo-slider-td">Карбон</td>
-                </tr>
-              </table>
+              <dl class="promo-slider-dl">
+                <dt class="promo-slider-dt">Длина палки</dt>
+                <dt class="promo-slider-dt">Вес палки</dt>
+                <dt class="promo-slider-dt">Материал</dt>
+                <dd class="promo-slider-dd">8,5 м</dd>
+                <dd class="promo-slider-dd">5 кг</dd>
+                <dd class="promo-slider-dd">Карбон</dd>
+              </dl>
             </div>
           </li>
         </ul>
@@ -201,33 +191,27 @@
             </ul>
             <ul class="slider-services-list">
               <li class="slider-services-item slider-services-img-delivery services-item-active">
-                <div class="slider-services-description-wrapper">
-                  <h3>Доставка</h3>
-                  <p class="slider-services-description">
-                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                    совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
-                    ваш этаж.
-                  </p>
-                </div>
+                <h3>Доставка</h3>
+                <p class="slider-services-description">
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+                  совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
+                  ваш этаж.
+                </p>
               </li>
               <li class="slider-services-item slider-services-img-guarantee">
-                <div class="slider-services-description-wrapper">
-                  <h3>Гарантия</h3>
-                  <p class="slider-services-description">
-                    Если из-за возгорания купленного у нас товара у вас сгорит дом —
-                    не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-                  </p>
-                </div>
+                <h3>Гарантия</h3>
+                <p class="slider-services-description">
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                  не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+                </p>
               </li>
               <li class="slider-services-item slider-services-img-credit">
-                <div class="slider-services-description-wrapper">
-                  <h3>Кредит</h3>
-                  <p class="slider-services-description">
-                    Залезть в долговую яму стало проще! Кредитные консультанты
-                    подберут для вас наиболее выгодные условия кредита. Выгодные для
-                    банка, разумеется.
-                  </p>
-                </div>
+                <h3>Кредит</h3>
+                <p class="slider-services-description">
+                  Залезть в долговую яму стало проще! Кредитные консультанты
+                  подберут для вас наиболее выгодные условия кредита. Выгодные для
+                  банка, разумеется.
+                </p>
               </li>
             </ul>
           </div>
@@ -300,8 +284,10 @@
 
     <footer class="footer-index">
       <div class="container-wrapper">
-        <img class="logo-footer" src="images/icons/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
         <div class="container-footer-index">
+          <a class="logo-footer-link" href="#">
+            <img class="logo-footer" src="images/icons/logo-footer.svg" width="145" height="36" alt="Логотип интернет-магазина «Девайс».">
+          </a>
           <address class="address">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
           </address>
@@ -316,9 +302,6 @@
               <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-        </div>
-        <div class="container-footer-index-btm">
           <ul class="resources-list">
             <li>
               <a class="logo-resources-link logo-tg-img" href="https://t.me/htmlacademy">
@@ -336,6 +319,7 @@
               </a>
             </li>
           </ul>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           <a class="logo-html-ac-link" href="https://htmlacademy.ru/">
             <span class="visually-hidden">Ссылка на онлайн-студию веб-разработки html academy.</span>
           </a>
