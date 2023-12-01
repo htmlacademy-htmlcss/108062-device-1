@@ -123,16 +123,8 @@ body {
 }
 
 .container-navigation-user,
-.navigation-user-list,
-.container-navigation,
-.navigation-list,
-.footer-navigation-list,
-.resources-list {
-  display: flex;
-}
-
-.container-navigation-user,
 .container-navigation {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -155,33 +147,113 @@ body {
 .search-input {
   width: 359px;
   padding: 10px 174px 10px 48px;
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #000000;
+  background: url("../images/icons/search.svg") no-repeat 16px 10px;
+}
+
+.search-input:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports selector(:focus-visible) {
+
+  .search-input:focus {
+    outline: none;
+  }
+
+  .search-input:focus-visible {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.search-input:disabled {
+  opacity: 30%;
 }
 
 .search-btn {
   width: 160px;
   padding: 10px;
+  border-radius: 0 50px 50px 0;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.search-btn:active {
+
+}
+
+.search-btn:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports selector(:focus-visible) {
+
+  .search-btn:focus {
+    outline: none;
+  }
+
+  .search-btn:focus-visible {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.search-btn:disabled {
+  opacity: 30%;
 }
 
 .navigation-user-list,
 .navigation-list {
-  box-sizing: border-box;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .navigation-user-list {
-  gap: 36px;
+  width: 497px;
 }
 
 .navigation-list {
   gap: 45px;
 }
 
+.navigation-user-item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.navigation-user-item:first-child {
+  margin-right: auto;
+}
+
 .header-index a {
   color: #000000;
   text-align: center;
   text-decoration: none;
+}
+
+.header-index .navigation-link,
+.header-index .catalog-link {
   text-transform: uppercase;
+}
+
+.navigation-user-link:hover,
+.navigation-link:hover {
+  opacity: 60%;
+}
+
+.navigation-user-link:active,
+.navigation-link:active {
+  opacity: 30%;
+}
+
+.navigation-user-link:focus-visible,
+.navigation-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .navigation-user-link {
@@ -204,11 +276,29 @@ body {
   height: 12px;
 }
 
+.basket-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: -15px;
+  top: 6px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: #FFFFFF;
+}
+
 .navigation-user-link-basket::before {
   content: "";
   background-image: url(../images/icons/basket.svg);
   width: 16px;
   height: 14px;
+}
+
+.navigation-user-link-basket {
+  position: relative;
 }
 
 .catalog-link::after {
