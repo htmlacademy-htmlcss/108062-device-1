@@ -37,28 +37,40 @@
             <button type="submit" class="catalog-btn">Каталог товаров</button>
             <ul class="header-catalog-list container-wrapper">
               <li class="header-catalog-item">
-                <a class="header-catalog-link header-catalog-link-current" href="#">Виртуальная реальность</a>
+                <ul class="header-catalog-list-1">
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="catalog.html">Моноподы для cелфи</a>
+                  </li>
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
               </li>
               <li class="header-catalog-item">
-                <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+                <ul class="header-catalog-list-2">
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
               </li>
               <li class="header-catalog-item">
-                <a class="header-catalog-link" href="#">Моноподы для cелфи</a>
-              </li>
-              <li class="header-catalog-item">
-                <a class="header-catalog-link" href="#">Умные часы</a>
-              </li>
-              <li class="header-catalog-item">
-                <a class="header-catalog-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="header-catalog-item">
-                <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+                <ul class="header-catalog-list-3">
+                  <li class="header-catalog-item-1">
+                    <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="#">Доставка</a>
+              <a class="navigation-link" href="#">Доставка</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">Гарантия</a>
@@ -75,7 +87,7 @@
       <section class="promo-slider container-wrapper">
         <h2 class="visually-hidden">Слайдер с товарами.</h2>
         <ul class="promo-slider-list">
-          <li class="promo-slider-item item-active">
+          <li class="promo-slider-item promo-slider-item-active">
             <span class="promo-slider-number">01</span>
             <img class="promo-slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
             <div class="container-promo-slider-item">
@@ -213,7 +225,7 @@
               </li>
             </ul>
             <ul class="slider-services-list">
-              <li class="slider-services-item slider-services-img-delivery services-item-active">
+              <li class="slider-services-item slider-services-img-delivery slider-services-item-active">
                 <h3>Доставка</h3>
                 <p class="slider-services-description">
                   Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду
@@ -241,21 +253,20 @@
         </div>
         <a class="delivery-special-link container-wrapper" href="#">
           Доставим редкий товар под заказ
-          <div class="container-delivery-special-circle">
-            <div class="delivery-special-circle">
-              <svg class="delivery-special-em" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12" fill="none">
-                <g clip-path="url(#clip0_11468_3002)">
-                  <path d="M2 0H0V2H2V0Z" fill="black"/>
-                  <path d="M2 4H0V12H2V4Z" fill="black"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_11468_3002">
-                    <rect width="2" height="12" fill="white"/>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-          </div>
+          <svg class="delivery-special-img-circle" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+            <circle cx="20.5" cy="20" r="20" fill="#DCDCDC" fill-opacity="0.5"/>
+          </svg>
+          <svg class="delivery-special-img-i" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="2" height="12" viewBox="0 0 2 12">
+            <g clip-path="url(#clip0_11365_564)">
+              <path d="M2 0H0V2H2V0Z"/>
+              <path d="M2 4H0V12H2V4Z"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_11365_564">
+                <rect width="2" height="12"/>
+              </clipPath>
+            </defs>
+          </svg>
         </a>
       </section>
       <div class="container-about-contacts container-wrapper">
