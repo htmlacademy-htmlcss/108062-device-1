@@ -31,7 +31,7 @@
               <a class="navigation-user-link navigation-user-link-basket" href="#"><span class="basket-circle">2</span>Корзина</a>
               <div class="popover-basket">
                 <div class="popover-basket-content">
-                  <h2 class="popover-title visually-hidden">Корзина</h2>
+                  <h2 class="visually-hidden">Корзина</h2>
                   <ul class="popover-list">
                     <li class="popover-item">
                       <a class="popover-list-link" href="#">
@@ -39,6 +39,7 @@
                         <p class="popover-info">Любительская селфи-палка</p>
                       </a>
                       <button class="popover-item-close-btn" type="button">
+                        <span class="visually-hidden">Закрыть</span>
                         <svg class="popover-item-close-img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
                           <path d="M10 1.07584L9.09091 0.166748L5 4.25766L0.909091 0.166748L0 1.07584L4.09091 5.16675L0 9.25766L0.909091 10.1667L5 6.07584L9.09091 10.1667L10 9.25766L5.90909 5.16675L10 1.07584Z" fill="white"/>
                         </svg>
@@ -50,6 +51,7 @@
                         <p class="popover-info">Профессиональная селфи-палка</p>
                       </a>
                       <button class="popover-item-close-btn" type="button">
+                        <span class="visually-hidden">Закрыть</span>
                         <svg class="popover-item-close-img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
                           <path d="M10 1.07584L9.09091 0.166748L5 4.25766L0.909091 0.166748L0 1.07584L4.09091 5.16675L0 9.25766L0.909091 10.1667L5 6.07584L9.09091 10.1667L10 9.25766L5.90909 5.16675L10 1.07584Z" fill="white"/>
                         </svg>
@@ -57,8 +59,8 @@
                     </li>
                   </ul>
                   <div class="popover-wrapper-info">
-                    <p class="popover-info">Товаров:&nbsp;2</p>
-                    <p class="popover-info">Сумма:&nbsp;2000&nbsp;₽</p>
+                    <p class="popover-info total-number">Товаров:&nbsp;2</p>
+                    <p class="popover-info total-price">Сумма:&nbsp;2000&nbsp;₽</p>
                   </div>
                   <div class="popover-wrapper-link">
                     <a class="popover-link" href="#">Открыть корзину</a>
@@ -427,6 +429,60 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-hidden">
+      <div class="modal-delivery">
+        <div class="modal-title-wrapper">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="field-group">
+            <legend class="visually-hidden">Контактные данные</legend>
+            <div class="delivery-input-wrapper">
+              <label class="delivery-label" for="name">Ваше имя:</label>
+              <input class="delivery-input personal-data name-icon" type="text" placeholder="Введите имя" id="name" name="name">
+              <span class="delivery-input-comment">Добавьте имя</span>
+            </div>
+            <div class="delivery-input-wrapper">
+              <label class="delivery-label" for="mail">Ваш e-mail:</label>
+              <input class="delivery-input personal-data mail-icon" type="email" placeholder="Введите e-mail" id="mail" name="mail">
+              <span class="delivery-input-comment">Забавный у вас адрес</span>
+            </div>
+          </fieldset>
+          <fieldset class="field-group">
+            <legend class="visually-hidden">Содержимое заказа</legend>
+            <div class="delivery-input-wrapper">
+              <label class="delivery-label" for="order-contents">Что нужно привезти:</label>
+              <input class="delivery-input order-contents" type="text" placeholder="В свободной форме" id="order-contents" name="order-contents">
+            </div>
+            <div class="delivery-input-wrapper">
+              <div class="label-quantity-wrapper">
+                <label class="delivery-label label-quantity" for="quantity">Количество:</label>
+                <div class="popover-label-quantity">
+                  <p class="popover-label-quantity-content">
+                    Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                    к провозу багажа.
+                  </p>
+                </div>
+              </div>
+              <div class="input-quantity-wrapper">
+                <button class="delivery-toggle toggle-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество.</span>
+                </button>
+                <input class="delivery-input quantity" type="number" value="1" id="quantity" name="quantity">
+                <button class="delivery-toggle toggle-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество.</span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <button class="delivery-form-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 </html>
