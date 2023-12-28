@@ -76,31 +76,31 @@
             <button type="submit" class="catalog-btn">Каталог товаров</button>
             <ul class="header-catalog-list container-wrapper">
               <li class="header-catalog-item">
-                <ul class="header-catalog-list-1">
-                  <li class="header-catalog-item-1">
+                <ul class="header-catalog-list-inner">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="#">Виртуальная реальность</a>
                   </li>
-                  <li class="header-catalog-item-1">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="catalog.html">Моноподы для cелфи</a>
                   </li>
-                  <li class="header-catalog-item-1">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="#">Экшн-камеры</a>
                   </li>
                 </ul>
               </li>
               <li class="header-catalog-item">
-                <ul class="header-catalog-list-2">
-                  <li class="header-catalog-item-1">
+                <ul class="header-catalog-list-inner">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
                   </li>
-                  <li class="header-catalog-item-1">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="#">Умные часы</a>
                   </li>
                 </ul>
               </li>
               <li class="header-catalog-item">
-                <ul class="header-catalog-list-3">
-                  <li class="header-catalog-item-1">
+                <ul class="header-catalog-list-inner">
+                  <li class="header-catalog-item-inner">
                     <a class="header-catalog-link" href="#">Квадрокоптеры</a>
                   </li>
                 </ul>
@@ -312,11 +312,11 @@
         <section class="about">
           <h2>О нас</h2>
           <p class="about-description">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+            Огромный выбор гаджетов не оставит равнодушным<br> гика, который есть в
             каждом из нас.
           </p>
           <p class="about-description">
-            Мы можем доставить ваш товар в самые отдалённые уголки России
+            Мы можем доставить ваш товар в самые отдалённые<br> уголки России
             транспортными компаниями:
           </p>
           <ul class="about-delivery-list">
@@ -329,7 +329,7 @@
         <section class="contacts">
           <h2>Контакты</h2>
           <p class="contacts-description">
-            Вы можете забрать товар сами, заехав в наш офис. Заодно сможете
+            Вы можете забрать товар сами, заехав в наш офис.<br> Заодно сможете
             проверить работоспособность покупки.
           </p>
           <h3>Интернет-магазин «Девайс»</h3>
@@ -355,7 +355,7 @@
         <div class="container-subscribe container-wrapper">
           <h2>Подпишитесь на рассылку</h2>
           <p class="subscribe-description">
-            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
+            Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами,
             распаковками, а также акции, спецпредложения и вот это вот всё.
           </p>
           <div class="subscribe-form-wrapper">
@@ -439,13 +439,13 @@
             <legend class="visually-hidden">Контактные данные</legend>
             <div class="delivery-input-wrapper">
               <label class="delivery-label" for="name">Ваше имя:</label>
-              <input class="delivery-input personal-data name-icon" type="text" placeholder="Введите имя" id="name" name="name"> <!--добавть класс error элементу с классом personal-data при ошибке-->
-              <span class="delivery-input-comment">Добавьте имя</span> <!--добавть класс error элементу с классом delivery-input-comment при ошибке-->
+              <input class="delivery-input personal-data name-icon" type="text" placeholder="Введите имя" id="name" name="name"> <!--добавить класс error элементу с классом personal-data при ошибке-->
+              <span class="delivery-input-comment">Добавьте имя</span> <!--добавить класс error элементу с классом delivery-input-comment при ошибке-->
             </div>
             <div class="delivery-input-wrapper">
               <label class="delivery-label" for="mail">Ваш e-mail:</label>
-              <input class="delivery-input personal-data mail-icon" type="email" placeholder="Введите e-mail" id="mail" name="mail"> <!--добавть класс error элементу с классом personal-data при ошибке-->
-              <span class="delivery-input-comment">Забавный у вас адрес</span> <!--добавть класс error элементу с классом delivery-input-comment при ошибке-->
+              <input class="delivery-input personal-data mail-icon" type="email" placeholder="Введите e-mail" id="mail" name="mail"> <!--добавить класс error элементу с классом personal-data при ошибке-->
+              <span class="delivery-input-comment">Забавный у вас адрес</span> <!--добавить класс error элементу с классом delivery-input-comment при ошибке-->
             </div>
           </fieldset>
           <fieldset class="field-group">
@@ -454,9 +454,10 @@
               <label class="delivery-label" for="order-contents">Что нужно привезти:</label>
               <input class="delivery-input order-contents" type="text" placeholder="В свободной форме" id="order-contents" name="order-contents">
             </div>
-            <div class="delivery-input-wrapper"> <!--добавть класс error элементу с классом input-quantity-wrapper при ошибке-->
+            <div class="delivery-input-wrapper"> <!--добавить класс error элементу с классом input-quantity-wrapper при ошибке-->
+              <label class="delivery-label" for="quantity">Количество:</label>
               <div class="label-quantity-wrapper">
-                <label class="delivery-label label-quantity" for="quantity">Количество:</label>
+                <button class="label-quantity-btn" type="button"></button>
                 <div class="popover-label-quantity">
                   <p class="popover-label-quantity-content">
                     Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
