@@ -295,14 +295,15 @@ li > .navigation-user-link-exit {
   display: none;
 }
 
-.navigation-user-item:focus-within .popover-basket {
+.navigation-user-item:has(.navigation-user-link-basket):hover .popover-basket,
+.navigation-user-item:has(.navigation-user-link-basket):focus-within .popover-basket {
   display: block;
 }
 
 .popover-basket-content {
   position: absolute;
-  top: 0;
-  left: -125px;
+  top: 8px;
+  left: -126px;
   width: 320px;
   min-height: 217px;
   display: flex;
@@ -519,9 +520,9 @@ a.link-disabled {
   position: absolute;
   left: -60px;
   top: 56px;
-  min-height: 170px;
+  min-height: 155px;
   margin: 0;
-  padding: 23px 60px 27px;
+  padding: 2px 60px 10px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -531,16 +532,22 @@ a.link-disabled {
   list-style-type: none;
 }
 
-.header-catalog-list-1,
-.header-catalog-list-2,
-.header-catalog-list-3 {
+.header-catalog-item:nth-child(2) {
+  margin-left: -3px;
+}
+
+.header-catalog-item:nth-child(3) {
+  margin-left: 9px;
+}
+
+.header-catalog-list-inner {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.header-catalog-item-1:not(:last-child) {
-  margin-bottom: 15px;
+.header-catalog-item-inner:not(:last-child) {
+  margin-bottom: 6px;
 }
 
 .header-catalog-link {
@@ -574,9 +581,9 @@ a.link-disabled {
 .main-index {
   flex-grow: 1;
   display: flex;
+  margin-top: -35px;
   flex-direction: column;
   gap: 70px;
-  margin-top: -20px;
 }
 
 /*PROMO-SLIDER*/
@@ -605,9 +612,8 @@ a.link-disabled {
 
 .promo-slider-number {
   grid-area: 1/3/2/-1;
-  margin-right: 45px;
-  display: flex;
-  justify-content: flex-end;
+  margin-right: 50px;
+  margin-top: 8px;
   font-size: 180px;
   font-weight: 700;
   line-height: 1;
@@ -704,12 +710,12 @@ a.link-disabled {
 
 .promo-slider-buttons {
   grid-area: 1/1/2/2;
-  width: 560px;
-  padding-left: 30px;
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 560px;
+  padding-left: 30px;
+  padding-top: 211px;
+  box-sizing: border-box;
 }
 
 .promo-slider-arrow-btn {
@@ -896,7 +902,7 @@ a.link-disabled {
 .slider-services-list-btn {
   margin: 0;
   padding: 0;
-  padding-top: 64px;
+  padding-top: 63px;
   list-style-type: none;
 }
 
@@ -1020,12 +1026,13 @@ a.link-disabled {
 }
 
 .slider-services-img-delivery::after {
+  content: "";
   grid-area: 1/2/3/3;
   justify-self: start;
   display: block;
   width: 136px;
   height: 164px;
-  content: "";
+  margin-top: 4px;
   background-image: url("../images/icons/delivery.svg");
 }
 
@@ -1114,7 +1121,7 @@ a.link-disabled {
 .container-about-contacts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 108px;
+  gap: 98px;
 }
 
 /*ABOUT*/
@@ -1137,18 +1144,12 @@ a.link-disabled {
 }
 
 .about h2,
-.contacts h2,
-.subscribe h2,
-.selfie-monopods {
+.contacts h2 {
   font-family: "raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
   margin: 0;
-}
-
-.about h2,
-.contacts h2 {
   margin-bottom: 48px;
 }
 
@@ -1159,16 +1160,18 @@ a.link-disabled {
 }
 
 .about-delivery-list {
-  padding-left: 18px;
+  padding-left: 22px;
   margin-bottom: 30px;
 }
 
 .about-delivery-item {
+  position: relative;
+  margin-bottom: 19px;
+  padding-left: 16px;
   color: #000000;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.36px;
-  margin-bottom: 19px;
 }
 
 .about-delivery-item::marker {
@@ -1178,8 +1181,6 @@ a.link-disabled {
 .about-details-link,
 .contacts-mail-link {
   position: relative;
-  min-width: 260px;
-  max-width: 520px;
   height: 40px;
   padding: 10px 10px;
   display: inline-block;
@@ -1192,6 +1193,16 @@ a.link-disabled {
   letter-spacing: 3.6px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.about-details-link {
+  min-width: 270px;
+  max-width: 520px;
+}
+
+.contacts-mail-link {
+  min-width: 260px;
+  max-width: 520px;
 }
 
 .about-details-link:hover,
@@ -1268,33 +1279,43 @@ a.link-disabled {
 }
 
 .container-subscribe {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 421px;
+  padding-top: 64px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+  column-gap: 52px;
 }
 
 .subscribe h2 {
+  grid-area: 1/1/2/2;
   display: block;
-  width: 348px;
-  height: 100px;
-  box-sizing: border-box;
-  margin: 64px auto 144px 6px;
+  width: min-content;
+  margin: 0 auto auto 6px;
+  font-family: "raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
 }
 
 .subscribe-description {
+  grid-area: 1/2/2/3;
   box-sizing: border-box;
   max-width: 560px;
-  max-height: 90px;
-  margin: 74px 6px 144px 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .subscribe-form-wrapper {
+  grid-area: 2/1/3/3;
+  align-self: end;
   display: flex;
   box-sizing: border-box;
   width: 1158px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 56px;
 }
 
 .subscribe-form {
@@ -1402,9 +1423,8 @@ a.link-disabled {
 /*FOOTER*/
 
 .footer-index {
+  padding: 60px 0;
   background-color: #444444;
-  padding-top: 62px;
-  padding-bottom: 61px;
 }
 
 .container-footer-index {
@@ -1419,7 +1439,7 @@ a.link-disabled {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 16px;
+  bottom: 15px;
   width: 80px;
   height: 7px;
   background-color: #FFC700;
@@ -1469,7 +1489,7 @@ a.link-disabled {
   font-family: "raleway", sans-serif;
   font-size: 18px;
   line-height: normal;
-  letter-spacing: 3.6px;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
@@ -1548,6 +1568,8 @@ a.link-disabled {
   grid-area: 2/3/3/4;
   height: 20px;
   display: block;
+  margin-top: 8px;
+  margin-right: 2px;
   justify-self: end;
   font-size: 16px;
   line-height: 20px;
@@ -1572,10 +1594,11 @@ a.link-disabled {
 .logo-html-ac-link {
   grid-area: 3/3/4/4;
   display: block;
-  box-sizing: border-box;
   width: 115px;
   height: 33px;
+  margin-top: 4px;
   justify-self: end;
+  box-sizing: border-box;
 }
 
 .logo-html-ac-link:focus-visible {
@@ -1628,6 +1651,14 @@ a.link-disabled {
   align-items: flex-start;
   gap: 16px;
   box-sizing: border-box;
+}
+
+.selfie-monopods {
+  font-family: "raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
 }
 
 .breadcrumbs {
@@ -1686,7 +1717,7 @@ a.link-disabled {
   display: flex;
   width: 840px;
   box-sizing: border-box;
-  padding: 20px 40px 20px 60px;
+  padding: 20px 40px;
   justify-content: space-between;
   align-items: center;
   background-color: inherit;
@@ -1823,16 +1854,21 @@ a.link-disabled {
   line-height: 20px;
   letter-spacing: -0.36px;
   color: #000000;
+  box-sizing: border-box;
 }
 
 .catalog-filter-title::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   width: 200px;
   height: 2px;
   background-color: #000000;
+}
+
+.toggle-filter-title {
+  margin-bottom: 27px;
 }
 
 .range-scale {
@@ -2241,7 +2277,6 @@ a.link-disabled {
 }
 
 .products-title {
-  width: min-content;
   margin: 0;
   font-weight: 700;
   font-size: 18px;
@@ -2296,10 +2331,12 @@ a.link-disabled {
 }
 
 .load-more-btn {
-  padding: 18px 39px;
+  min-height: 55px;
+  padding: 10px;
   border: 3px solid #E5E5E5;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: inherit;
   cursor: pointer;
 }
@@ -2392,7 +2429,10 @@ a.link-disabled {
 }
 
 .pagination-link-toggle {
-  padding: 25px;
+  min-height: 71px;
+  display: flex;
+  align-items: center;
+  padding: 0 23px;
   font-family: "raleway", sans-serif;
   color: #000000;
   font-size: 18px;
@@ -2462,43 +2502,6 @@ a.link-disabled {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
-}
-
-.modal-close-button {
-  position: absolute;
-  top: 74px;
-  right: 70px;
-  width: 26px;
-  height: 26px;
-  padding: 0;
-  border: none;
-  background: url("../images/icons/modal-close-button.svg") center no-repeat;
-  cursor: pointer;
-}
-
-.modal-close-button:hover {
-  opacity: 0.6;
-}
-
-.modal-close-button:active {
-  opacity: 0.3;
-}
-
-.modal-close-button:focus {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
-@supports selector(:focus-visible){
-
-  .modal-close-button:focus {
-    outline: none;
-  }
-
-  .modal-close-button:focus-visible {
-    outline: 2px solid #AF4FFF;
-    outline-offset: 2px;
-  }
 }
 
 .delivery-form {
@@ -2610,22 +2613,41 @@ a.link-disabled {
   opacity: 0.3;
 }
 
-.label-quantity {
+.label-quantity-wrapper {
   position: relative;
 }
 
-.label-quantity-wrapper:hover .popover-label-quantity {
+.label-quantity-wrapper:hover .popover-label-quantity,
+.label-quantity-wrapper:focus-within .popover-label-quantity {
   display: block;
 }
 
-.label-quantity::after {
-  content: "";
+.label-quantity-btn {
   position: absolute;
-  top: -3px;
+  top: -37px;
   right: 34px;
   width: 26px;
   height: 26px;
-  background-image: url("../images/icons/quantity-icon.svg");
+  padding: 0;
+  border: none;
+  background: url("../images/icons/quantity-icon.svg") center no-repeat;
+}
+
+.label-quantity-btn:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+@supports selector(:focus-visible) {
+
+  .label-quantity-btn:focus {
+    outline: none;
+  }
+
+  .label-quantity-btn:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+  }
 }
 
 .popover-label-quantity {
@@ -2765,4 +2787,41 @@ a.link-disabled {
 
 .delivery-form-btn:active::before {
   background-color: #FFCC33;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 74px;
+  right: 70px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  background: url("../images/icons/modal-close-button.svg") center no-repeat;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+@supports selector(:focus-visible){
+
+  .modal-close-button:focus {
+    outline: none;
+  }
+
+  .modal-close-button:focus-visible {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+  }
 }
