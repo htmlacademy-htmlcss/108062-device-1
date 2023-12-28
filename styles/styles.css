@@ -527,17 +527,13 @@ a.link-disabled {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: start;
-  column-gap: 62px;
+  column-gap: 59px;
   background-color: #FFE17F;
   list-style-type: none;
 }
 
-.header-catalog-item:nth-child(2) {
-  margin-left: -3px;
-}
-
 .header-catalog-item:nth-child(3) {
-  margin-left: 9px;
+  margin-left: 12px;
 }
 
 .header-catalog-list-inner {
