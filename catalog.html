@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
 
@@ -16,7 +18,7 @@
         <div class="container-navigation-user">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="search-input-label" for="search"><span class="visually-hidden">Поиск по сайту.</span>
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
             </label>
             <button type="submit" class="search-btn">Найти</button>
           </form>
@@ -73,7 +75,7 @@
         </div>
         <div class="container-navigation">
           <div class="container-catalog-btn">
-            <button type="submit" class="catalog-btn">Каталог товаров</button>
+            <button type="button" class="catalog-btn">Каталог товаров</button>
             <ul class="header-catalog-list container-wrapper">
               <li class="header-catalog-item">
                 <ul class="header-catalog-list-inner">
@@ -173,7 +175,7 @@
                     от <input class="range-input" type="number" value="0" name="min-price">
                   </label>
                   <label class="range-filter-label">
-                    до <input class="range-input" type="number" value="5000" name="max-price">
+                    до <input class="range-input" type="number" value="5000" name="max-price" required>
                   </label>
                 </div>
               </div>
