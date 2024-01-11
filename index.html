@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
 
@@ -16,7 +18,7 @@
         <div class="container-navigation-user">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="search-input-label" for="search"><span class="visually-hidden">Поиск по сайту.</span>
-              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
             </label>
             <button type="submit" class="search-btn">Найти</button>
           </form>
@@ -72,7 +74,7 @@
         </div>
         <div class="container-navigation">
           <div class="container-catalog-btn">
-            <button type="submit" class="catalog-btn">Каталог товаров</button>
+            <button type="button" class="catalog-btn">Каталог товаров</button>
             <ul class="header-catalog-list container-wrapper">
               <li class="header-catalog-item">
                 <ul class="header-catalog-list-inner">
@@ -127,7 +129,7 @@
         <ul class="promo-slider-list">
           <li class="promo-slider-item">
             <span class="promo-slider-number">01</span>
-            <img class="promo-slider-image" src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер.">
+            <img class="promo-slider-image" src="images/slider-1.png" width="560" height="525" alt="Квадрокоптер.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Порхает как бабочка, жалит как пчела!
@@ -147,7 +149,7 @@
           </li>
           <li class="promo-slider-item promo-slider-item-is-hidden">
             <span class="promo-slider-number">02</span>
-            <img class="promo-slider-image" src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
+            <img class="promo-slider-image" src="images/slider-2.png" width="560" height="525" alt="Фитнес-браслет.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Худеем<br> правильно!
@@ -165,7 +167,7 @@
           </li>
           <li class="promo-slider-item promo-slider-item-is-hidden">
             <span class="promo-slider-number">03</span>
-            <img class="promo-slider-image" src="images/slider-3.png" width="560" height="560" alt="Палка для селфи.">
+            <img class="promo-slider-image" src="images/slider-3.png" width="560" height="525" alt="Палка для селфи.">
             <div class="container-promo-slider-item">
               <p class="promo-slider-bold">
                 Делай селфи,<br> как Бен Стиллер!
@@ -360,7 +362,7 @@
           <div class="subscribe-form-wrapper">
             <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="subscribe-e-mail">Ваш e-mail.</label>
-              <input class="subscribe-input" type="email" name="subscribe-e-mail" id="subscribe-e-mail" placeholder="Ваш e-mail">
+              <input class="subscribe-input" type="email" name="subscribe-e-mail" id="subscribe-e-mail" placeholder="Ваш e-mail" required> <!--добавить класс error элементу subscribe-input при ошибке-->
               <button class="subscribe-button" type="submit" name="subscribe-btn">Подписаться</button>
             </form>
             <span class="subscribe-for-free">
@@ -465,11 +467,17 @@
                 </div>
               </div>
               <div class="input-quantity-wrapper">
-                <button class="delivery-toggle toggle-minus" type="button">
+                <button class="delivery-toggle" type="button">
+                  <svg class="delivery-toggle-img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M16 7H0V9H16V7Z" fill="black"/>
+                  </svg>
                   <span class="visually-hidden">Уменьшить количество.</span>
                 </button>
                 <input class="delivery-input quantity" type="number" value="1" id="quantity" name="quantity">
-                <button class="delivery-toggle toggle-plus" type="button">
+                <button class="delivery-toggle" type="button">
+                  <svg class="delivery-toggle-img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                  </svg>
                   <span class="visually-hidden">Увеличить количество.</span>
                 </button>
               </div>
