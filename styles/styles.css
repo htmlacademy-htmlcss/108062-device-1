@@ -2404,8 +2404,9 @@ a.link-disabled {
 }
 
 .pagination-link {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  max-width: 80px;
+  min-height: 40px;
   padding: 10px;
   box-sizing: border-box;
   display: inline-block;
@@ -2418,6 +2419,7 @@ a.link-disabled {
   text-decoration: none;
   border: none;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 .pagination-link:hover {
